@@ -106,6 +106,10 @@ header div:last-child {
     margin-right: 20px;
 }
 
+#first div:nth-child(2) img, #seconde div:nth-child(2) img {
+    max-width: 70%;
+}
+
 .button {
     background-color: #74FECB;
     border-radius: 10px;
