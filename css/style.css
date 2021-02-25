@@ -46,7 +46,6 @@ header nav ul {
     list-style-type: none;
     margin: 0;
     width: 30vw;
-    min-width: 400px;
 }
 
 header nav a {
@@ -140,6 +139,11 @@ header nav a:hover:after {
 }
 
 /* \\PROJETS\\ */
+
+
+#talents, #projets {
+    scroll-margin-top: 9VH;
+}
 
 /* \\CLASS\\ */
 

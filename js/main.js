@@ -20,7 +20,6 @@ var swiper = new Swiper('.swiper-container', {
 let checkbox = document.querySelector("header nav input")
 checkbox.checked = false;
 let nav = document.querySelectorAll("header li a")
-console.log(nav)
 
 nav.forEach(element => {
     element.addEventListener('click', function () {
@@ -31,9 +30,19 @@ nav.forEach(element => {
             checkbox.checked = false;
             window.scrollTo(0, parseInt(scrollY || '0') * -1);
         }
-        document.querySelector('#' + element.name).scrollIntoView({
-            behavior: "smooth"
-        });
+        let name = document.querySelector('#' + element.name)
+        console.log(name)
+        if (name.id == "introduction") {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        } else {
+            name.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
     })
 });
 checkbox.addEventListener('change', function () {
