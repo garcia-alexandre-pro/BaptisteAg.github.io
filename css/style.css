@@ -81,6 +81,7 @@ header nav a:hover:after {
 #introduction {
     height: 82vh;
     display: flex;
+    min-height: 450px;
 }
 
 #introduction>div:first-child {
@@ -131,6 +132,11 @@ header nav a:hover:after {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-height: 450px;
+}
+
+#talents > div {
+    display: flex;
 }
 
 /* \\TALENTS\\ */
@@ -139,6 +145,15 @@ header nav a:hover:after {
 
 #projets {
     height: 91vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+}
+
+#projets h1 {
+    letter-spacing: 0.2em;
 }
 
 /* \\PROJETS\\ */
@@ -188,6 +203,7 @@ header nav a:hover:after {
     background-color: black;
     width: 94VW;
     z-index: 6;
+    min-height: calc(50px - 5vh);
 }
 
 .fakeHeader {
@@ -244,16 +260,14 @@ header nav a:hover:after {
     }
 }
 
-
+.swiper-container {
+    width: 50vw;
+}
 
 .skills-bar-container {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 70vw;
-    padding: 0;
+    width: 40vw;
+    /*! padding: 0; */
 }
 
 #talents h1 {
@@ -639,9 +653,6 @@ header nav a:hover:after {
         height: 90vh;
     }
     .swiper-container {
-        position: absolute;
-        left: 0;
-        margin-top: 5vw;
-        width: 100vw;
+        width: 70vw;
     }
 }
