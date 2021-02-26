@@ -654,6 +654,14 @@ header nav a:hover:after {
         max-height: 80%;
         max-width: 100%;
     }
+    #introduction div:first-child div {
+        flex-direction: column;
+    }
+    #introduction div:first-child a {
+        margin: 10px;
+    }
+
+
     #talents {
         height: 90vh;
     }
