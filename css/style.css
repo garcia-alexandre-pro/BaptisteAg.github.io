@@ -136,8 +136,15 @@ header nav a:hover:after {
     min-height: 450px;
 }
 
-#talents > div {
+#talents>div {
     display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#talents div ul {
+    margin: 0;
+    padding: 0;
 }
 
 /* \\TALENTS\\ */
@@ -268,7 +275,6 @@ header nav a:hover:after {
 .skills-bar-container {
     list-style: none;
     width: 40vw;
-    /*! padding: 0; */
 }
 
 #talents h1 {
@@ -649,9 +655,10 @@ header nav a:hover:after {
     }
     #introduction>div:first-child {
         margin: 0;
+        width: 100%;
     }
     #introduction div:nth-child(2) img {
-        max-height: 80%;
+        max-height: 100%;
         max-width: 100%;
     }
     #introduction div:first-child div {
@@ -660,10 +667,11 @@ header nav a:hover:after {
     #introduction div:first-child a {
         margin: 10px;
     }
-
-
     #talents {
         height: 90vh;
+    }
+    #talents>div {
+        justify-content: space-between;
     }
     #projets {
         height: 90vh;
