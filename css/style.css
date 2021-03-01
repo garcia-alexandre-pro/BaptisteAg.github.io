@@ -719,4 +719,7 @@ header nav a:hover:after {
     .skills-bar-container {
         width: 90vw;
     }
+    #talents div ul {
+        width: 100%;
+    }
 }
