@@ -156,7 +156,7 @@ header nav a:hover:after {
 /* \\PROJETS\\ */
 
 #projets {
-    height: 91vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,6 +166,22 @@ header nav a:hover:after {
 
 #projets h1 {
     letter-spacing: 0.2em;
+}
+
+#projets>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#projets>div>div {
+    padding: 20px;
+}
+
+#projets>div>div>img {
+    width: 30vw;
+    min-width: 500px;
 }
 
 /* \\PROJETS\\ */
@@ -686,8 +702,8 @@ header nav a:hover:after {
     #talents>div {
         justify-content: space-between;
     }
-    #projets {
-        height: 90vh;
+    #projets>div>div>img {
+        min-width: 400px;
     }
     .swiper-container {
         width: 70vw;
