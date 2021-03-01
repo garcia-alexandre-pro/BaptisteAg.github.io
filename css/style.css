@@ -198,7 +198,6 @@ header nav a:hover:after {
     border: #18332A 1px solid;
     padding: 10px 25px;
     text-decoration: none;
-    /* color: #74FECB; */
     color: white;
     transition: 0.3s;
 }
