@@ -123,6 +123,10 @@ header nav a:hover:after {
     border-radius: 10px;
 }
 
+#introduction a {
+    display: flex;
+}
+
 /* \\INTRODUCTION\\ */
 
 /* \\TALENTS\\ */
@@ -201,6 +205,15 @@ header nav a:hover:after {
 .greybutton:hover {
     background-color: black;
     border-color: #18332A;
+}
+
+.greybutton svg, .button svg {
+    width: 1em;
+    margin-left: 10PX;
+}
+
+.greybutton:hover svg, .button:hover svg {
+    color: #74FECB;
 }
 
 .headermin {
