@@ -697,15 +697,26 @@ header nav a:hover:after {
         margin: 10px;
     }
     #talents {
-        height: 90vh;
+        height: auto;
+    }
+    .skills-bar-container {
+        margin-top: 50px !important;
+    }
+    .skills-bar-container h1 {
+        letter-spacing: normal !important;
+        font-size: 1.5em;
     }
     #talents>div {
         justify-content: space-between;
+        flex-direction: column;
     }
     #projets>div>div>img {
         min-width: 400px;
     }
     .swiper-container {
         width: 70vw;
+    }
+    .skills-bar-container {
+        width: 90vw;
     }
 }

@@ -1,4 +1,3 @@
-MicroModal.init();
 if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     let scriptDesktop = document.createElement("script");
     scriptDesktop.setAttribute("src", "js/desktop.js");
