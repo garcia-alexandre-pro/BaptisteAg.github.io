@@ -151,6 +151,15 @@ header nav a:hover:after {
     padding: 0;
 }
 
+#talents > h1 {
+    letter-spacing: 0.2em;
+    margin-bottom: 5vh;
+}
+
+#talents div ul h1 {
+    height: 2.5em;
+}
+
 /* \\TALENTS\\ */
 
 /* \\PROJETS\\ */
@@ -304,10 +313,6 @@ header nav a:hover:after {
 .skills-bar-container {
     list-style: none;
     width: 40vw;
-}
-
-#talents h1 {
-    letter-spacing: 0.2em;
 }
 
 .skills-bar-container li {
