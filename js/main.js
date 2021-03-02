@@ -56,3 +56,9 @@ checkbox.addEventListener('change', function () {
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
 });
+
+Swal.fire(
+    'Bienvenu !',
+    'Mon portfolio est toujours en cours de développement et évolue au fil des jours. Merci de votre indulgence :)',
+    'info'
+  )

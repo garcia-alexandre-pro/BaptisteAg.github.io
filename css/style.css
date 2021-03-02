@@ -677,14 +677,13 @@ header nav a:hover:after {
     }
     #introduction {
         height: 90vh;
-        width: 90vw;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
     }
     #introduction>div:first-child {
         margin: 0;
-        width: 100%;
+        width: 95%;
     }
     #introduction div:nth-child(2) img {
         max-height: 100%;
@@ -709,6 +708,9 @@ header nav a:hover:after {
     #talents>div {
         justify-content: space-between;
         flex-direction: column;
+    }
+    #projets > div > div {
+        padding: 20px 0;
     }
     #projets>div>div>img {
         min-width: 400px;
