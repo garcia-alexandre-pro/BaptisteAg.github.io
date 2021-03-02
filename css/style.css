@@ -699,7 +699,7 @@ header nav a:hover:after {
         height: auto;
     }
     .skills-bar-container {
-        margin-top: 50px !important;
+        margin: 25px 0 !important;
     }
     .skills-bar-container h1 {
         letter-spacing: normal !important;
