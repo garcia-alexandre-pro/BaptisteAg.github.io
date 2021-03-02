@@ -58,7 +58,7 @@ checkbox.addEventListener('change', function () {
 });
 
 Swal.fire(
-    'Bienvenu !',
+    'Bienvenue !',
     'Mon portfolio est toujours en cours de développement et évolue au fil des jours. Merci de votre indulgence :)',
     'info'
   )
