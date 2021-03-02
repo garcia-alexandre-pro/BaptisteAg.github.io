@@ -235,7 +235,7 @@ header nav a:hover:after {
 .headermin {
     position: fixed;
     top: 0;
-    height: 5vh;
+    height: 3vh;
     padding: 2VH 3vw;
     background-color: black;
     width: 94VW;
