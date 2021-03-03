@@ -45,7 +45,9 @@ header nav ul {
     justify-content: space-around;
     list-style-type: none;
     margin: 0;
-    width: 30vw;
+    padding: 0;
+    width: 40vw;
+    max-width: 700px;
 }
 
 header nav a {
@@ -56,6 +58,7 @@ header nav a {
     position: relative;
     padding: 15px 0;
     cursor: pointer;
+    font-size: clamp(1em, 2vw, 1.4em);
 }
 
 header nav a:after {
@@ -90,12 +93,13 @@ header nav a:hover:after {
 }
 
 #introduction div:first-child h1 {
-    font-size: 1.8em;
+    font-size: clamp(1.8em,1.5vw,3em);
 }
 
 #introduction div:first-child p {
     line-height: 1.5em;
     color: white;
+    font-size: clamp(1em,1vw,1.5em);
 }
 
 #introduction div:first-child div {
@@ -152,12 +156,14 @@ header nav a:hover:after {
 }
 
 #talents>h1 {
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     margin-bottom: 5vh;
+    font-size: clamp(2em,1.8vw,3em);
 }
 
 #talents div ul h1 {
     height: 2.5em;
+    font-size: 1.5em;
 }
 
 /* \\TALENTS\\ */
