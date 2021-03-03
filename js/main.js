@@ -4,17 +4,17 @@ if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
     document.body.appendChild(scriptDesktop);
 }
 
-var swiper = new Swiper('.swiper-container', {
-    pagination: {
-        el: '.swiper-pagination',
-        dynamicBullets: true,
-    },
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: true,
-    },
-    loop: true,
-});
+// var swiper = new Swiper('.swiper-container', {
+//     pagination: {
+//         el: '.swiper-pagination',
+//         dynamicBullets: true,
+//     },
+//     autoplay: {
+//         delay: 5000,
+//         disableOnInteraction: true,
+//     },
+//     loop: true,
+// });
 
 
 let checkbox = document.querySelector("header nav input")
@@ -59,6 +59,6 @@ checkbox.addEventListener('change', function () {
 
 Swal.fire(
     'Bienvenue !',
-    'Mon portfolio est toujours en cours de développement et évolue au fil des jours. Merci de votre indulgence 🙂',
+    'Mon portfolio est toujours en cours de développement (surtout la partie "Mes projets") et évolue au fil des jours. Merci de votre indulgence 🙂<br>Mon téléphone : 06 62 43 09 40 📱',
     'info'
   )
