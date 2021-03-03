@@ -151,7 +151,7 @@ header nav a:hover:after {
     padding: 0;
 }
 
-#talents > h1 {
+#talents>h1 {
     letter-spacing: 0.2em;
     margin-bottom: 5vh;
 }
@@ -197,6 +197,14 @@ header nav a:hover:after {
 
 #talents, #projets {
     scroll-margin-top: 9VH;
+}
+
+footer p {
+    font-size: 0.8em;
+    color: white;
+    text-align: center;
+}
+
 }
 
 /* \\CLASS\\ */
@@ -713,7 +721,7 @@ header nav a:hover:after {
         justify-content: space-between;
         flex-direction: column;
     }
-    #projets > div > div {
+    #projets>div>div {
         padding: 20px 0;
     }
     #projets>div>div>img {
