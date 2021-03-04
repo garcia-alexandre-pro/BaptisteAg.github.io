@@ -56,7 +56,7 @@ header nav a {
     letter-spacing: 0.1em;
     display: inline-block;
     position: relative;
-    padding: 15px 0;
+    padding: 10px 0;
     cursor: pointer;
     font-size: clamp(1em, 2vw, 1.4em);
 }
