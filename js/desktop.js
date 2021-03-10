@@ -23,7 +23,7 @@ var sticky = header.offsetHeight;
 
 headerMin()
 function headerMin() {
-  if (window.pageYOffset > sticky && window.innerWidth > 700) {
+  if (window.pageYOffset > sticky) {
     header.classList.add("headermin");
     fakeheader.style.display = "block";
   } else {

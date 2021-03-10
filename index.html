@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baptiste Ageron</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="images/logo.svg">
 </head>
@@ -156,47 +156,66 @@
         <div id="projets">
             <h1>Mes projets</h1>
 
-            <!-- <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <img class="swiper-slide" src="./images/projets/1.jpg" alt="">
-                    <img class="swiper-slide" src="./images/projets/2.jpg" alt="">
-                </div>
-                <div class="swiper-pagination"></div>
-            </div> -->
             <div>
                 <div>
-                    <img src="./images/projets/creacuisine_website.png" alt="">
-                    <p></p>
+                    <img src="./images/projets/creacuisine_logo.png" alt="">
+                    <p>Projet ayant pour but de crée un site professionnel pour une entreprise réaliser au cours de
+                        l'année 2019</p>
                 </div>
                 <div>
-                    <img src="./images/projets/creacuisine_website2.png" alt="">
-                    <p></p>
+                    <img src="./images/projets/laravel_logo.png" alt="">
+                    <p>Projet en équipe, notre but étais de copier le site de la fnac en utilisant le framework PHP
+                        Laravel</p>
                 </div>
                 <div>
-                    <img src="./images/projets/laravel_website.png" alt="">
-                    <p></p>
+                    <img src="./images/projets/sfml_logo.png" alt="">
+                    <p>Projet d'équipe .Jeu de puzzle d'image. Développé en C/C++ en utilisant la bibliothèque SFML.</p>
                 </div>
                 <div>
-                    <img src="./images/projets/sfml_game.png" alt="">
-                    <p></p>
-                </div>
-                <div>
-                    <img src="./images/projets/sfml_game2.png" alt="">
-                    <p></p>
-                </div>
-                <div>
-                    <img src="./images/projets/unity_game.png" alt="">
-                    <p></p>
+                    <img src="./images/projets/unity_logo.png" alt="">
+                    <p>Projet d'équipe, jeux de stratégie 3d/2d. Développé en C# avec le logiciel Unity.</p>
                 </div>
             </div>
+
+
+            <div id="fullscreenProjet">
+
+                <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
+
+                <div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/projets/creacuisine_website.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/projets/creacuisine_website2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <p>
+                        Avec un petit groupe de 5 étudiants,
+                        notre tâche était de créer un site de e-commerce pour l'entreprise Créa-Cuisine. Ce projet est
+                        le premier projet réaliser pour un professionnel dont je prends part. Le travail se
+                        doit donc d’être sérieux et de respecter les délais fixés. Nous avons utilisé le CMS wordpress.
+                    </p>
+                </div>
+
+            </div>
+
+            <span onclick="openNav()" style="display: none;">open</span>
 
 
     </main>
     <footer>
         <p>Développé sans CMS, uniquement en html, css et javacript.</p>
     </footer>
-    <!-- <script src="js/https _unpkg.com_swiper@6.4.15_swiper-bundle.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
+    <script src="js/https _unpkg.com_swiper@6.4.15_swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

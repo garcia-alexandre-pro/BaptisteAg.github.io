@@ -4,17 +4,20 @@ if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
     document.body.appendChild(scriptDesktop);
 }
 
-// var swiper = new Swiper('.swiper-container', {
-//     pagination: {
-//         el: '.swiper-pagination',
-//         dynamicBullets: true,
-//     },
-//     autoplay: {
-//         delay: 5000,
-//         disableOnInteraction: true,
-//     },
-//     loop: true,
-// });
+var swiper = new Swiper('.swiper-container', {
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
+    loop: true,
+});
 
 
 let checkbox = document.querySelector("header nav input")
@@ -47,13 +50,15 @@ nav.forEach(element => {
 });
 checkbox.addEventListener('change', function () {
     if (this.checked) {
-        document.body.style.top = `-${window.scrollY}px`;
-        document.body.style.position = 'fixed';
+        // document.body.style.top = `-${window.scrollY}px`;
+        // document.body.style.position = 'fixed';
+        document.body.style.overflowY = "hidden";
     } else {
-        const scrollY = document.body.style.top;
-        document.body.style.position = '';
-        document.body.style.top = '';
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        // const scrollY = document.body.style.top;
+        // document.body.style.position = '';
+        // document.body.style.top = '';
+        // window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        document.body.style.overflowY = "";
     }
 });
 
@@ -61,4 +66,15 @@ Swal.fire(
     'Bienvenue !',
     'Mon portfolio est toujours en cours de développement (surtout la partie "Mes projets") et évolue au fil des jours.<br>Merci de votre indulgence 🙂<br><br>Mon téléphone : 06 62 43 09 40 📱',
     'info'
-  )
+)
+
+let fullscreenProjet = document.querySelector("#fullscreenProjet")
+function openNav() {
+    document.body.style.overflowY = "hidden";
+    fullscreenProjet.style.width = "100%";
+}
+
+function closeNav() {
+    document.body.style.overflowY = "";
+    fullscreenProjet.style.width = "0%";
+}
