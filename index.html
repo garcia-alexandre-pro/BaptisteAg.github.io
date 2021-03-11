@@ -157,21 +157,21 @@
             <h1>Mes projets</h1>
 
             <div>
-                <div>
+                <div onclick="openNav(firstp)">
                     <img src="./images/projets/creacuisine_logo.png" alt="">
                     <p>Projet ayant pour but de crée un site professionnel pour une entreprise réaliser au cours de
                         l'année 2019</p>
                 </div>
-                <div>
+                <div onclick="openNav(secondep)">
                     <img src="./images/projets/laravel_logo.png" alt="">
                     <p>Projet en équipe, notre but étais de copier le site de la fnac en utilisant le framework PHP
                         Laravel</p>
                 </div>
-                <div>
+                <div onclick="openNav(thirdp)">
                     <img src="./images/projets/sfml_logo.png" alt="">
                     <p>Projet d'équipe .Jeu de puzzle d'image. Développé en C/C++ en utilisant la bibliothèque SFML.</p>
                 </div>
-                <div>
+                <div onclick="openNav(fourthp)">
                     <img src="./images/projets/unity_logo.png" alt="">
                     <p>Projet d'équipe, jeux de stratégie 3d/2d. Développé en C# avec le logiciel Unity.</p>
                 </div>
@@ -182,7 +182,7 @@
 
                 <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
 
-                <div>
+                <div id="firstp" class="hidden ndhidden">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -205,11 +205,68 @@
                     </p>
                 </div>
 
+                <div id="secondep" class="hidden ndhidden">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/projets/laravel_website.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <p>
+                        Le projet Laravel avait comme but de nous faire travailler avec la méthode de travail SCRUM sur
+                        le développement d'un site d'e-commerce fictif. Notre équipe de 5 personnes devait s'organiser
+                        du mieux possible pour présenter à un client fictif, toutes les semaines, l'avancement du
+                        projet.
+                    </p>
+                </div>
+
+
+                <div id="thirdp" class="hidden ndhidden">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/projets/sfml_game.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/projets/sfml_game2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <p>
+                        Le but de ce jeu est de trouver ce qu'il y a de dissimulé derrière les tuiles .Pour ce faire il
+                        faut en détruire le moins possible.
+                    </p>
+                </div>
+
+                <div id="fourthp" class="hidden ndhidden">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/projets/unity_game.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <p>
+                        DashRaider est principalement un jeu de puzzle/action. Dans DashRaider vous jouez le raider,
+                        votre but est de traverser le donjon, en complétant chaque pièce par des dashes. Sachez
+                        cependant que votre nombre de dashes est limité, tout comme votre santé. Le donjon a trois
+                        étages avec cinq pièces chacune que vous pouvez explorer et compléter.
+                    </p>
+                </div>
             </div>
-
-            <span onclick="openNav()" style="display: none;">open</span>
-
-
     </main>
     <footer>
         <p>Développé sans CMS, uniquement en html, css et javacript.</p>

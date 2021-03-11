@@ -11,7 +11,7 @@ var swiper = new Swiper('.swiper-container', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
+    },
     autoplay: {
         delay: 5000,
         disableOnInteraction: true,
@@ -50,14 +50,8 @@ nav.forEach(element => {
 });
 checkbox.addEventListener('change', function () {
     if (this.checked) {
-        // document.body.style.top = `-${window.scrollY}px`;
-        // document.body.style.position = 'fixed';
         document.body.style.overflowY = "hidden";
     } else {
-        // const scrollY = document.body.style.top;
-        // document.body.style.position = '';
-        // document.body.style.top = '';
-        // window.scrollTo(0, parseInt(scrollY || '0') * -1);
         document.body.style.overflowY = "";
     }
 });
@@ -69,7 +63,16 @@ Swal.fire(
 )
 
 let fullscreenProjet = document.querySelector("#fullscreenProjet")
-function openNav() {
+
+function openNav(id) {
+    let thisuse = document.getElementById("fullscreenProjet").querySelector("div:not(.hidden).ndhidden");
+    let projtogg = document.getElementById(id.id);
+    if (thisuse !== null) {
+
+        thisuse.classList.toggle("hidden");
+
+    };
+    projtogg.classList.toggle("hidden");
     document.body.style.overflowY = "hidden";
     fullscreenProjet.style.width = "100%";
 }

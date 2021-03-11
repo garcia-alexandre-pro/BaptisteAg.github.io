@@ -208,9 +208,10 @@ header nav a:hover:after {
     align-items: center;
 }
 
-#projets>div>div {
+#projets>div:first-of-type>div {
     width: 200px;
     margin: 30px 10%;
+    cursor: pointer;
 }
 
 #projets>div>div>img {
@@ -257,13 +258,20 @@ header nav a:hover:after {
     top: 20px;
     right: 45px;
     font-size: 60px;
+    z-index: 5;
 }
+
+/* #firstp, #secondep, #thirdp, #fourthp {
+    visibility: hidden;
+    position:;
+} */
 
 .swiper-container {
     width: 80vw;
 }
 
 .swiper-slide img {
+    height: 100%;
     width: 100%;
 }
 
@@ -281,6 +289,13 @@ footer p {
 
 /* \\CLASS\\ */
 
+.hidden
+{
+	position:absolute; 
+	top:-999px;
+	left:-9999px;
+	display: none;
+}
 .button {
     background-color: #74FECB;
     border-radius: 10px;
