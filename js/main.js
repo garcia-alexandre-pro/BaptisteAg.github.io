@@ -34,7 +34,6 @@ nav.forEach(element => {
             window.scrollTo(0, parseInt(scrollY || '0') * -1);
         }
         let name = document.querySelector('#' + element.name)
-        console.log(name)
         if (name.id == "introduction") {
             window.scrollTo({
                 top: 0,
@@ -45,7 +44,7 @@ nav.forEach(element => {
                 behavior: "smooth"
             });
         }
-
+        document.body.style.overflowY = "";
     })
 });
 checkbox.addEventListener('change', function () {
