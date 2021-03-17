@@ -19,8 +19,6 @@ var granimInstance = new Granim({
     }
 });
 
-AOS.init();
-
 var swiper = new Swiper('.swiper-container', {
     pagination: {
         el: '.swiper-pagination'
@@ -33,7 +31,7 @@ var swiper = new Swiper('.swiper-container', {
         delay: 5000,
         disableOnInteraction: true,
     },
-    loop: true,
+    // loop: true,
 });
 
 
@@ -84,7 +82,7 @@ function openNav(id) {
     if (thisuse !== null) {
         thisuse.classList.toggle("hidden");
     };
-    
+
     projtogg.classList.toggle("hidden");
     document.body.style.overflowY = "hidden";
     fullscreenProjet.style.width = "100%";
