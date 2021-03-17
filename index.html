@@ -7,6 +7,7 @@
     <title>Baptiste Ageron</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="images/logo.svg">
 </head>
@@ -32,7 +33,7 @@
     </div>
     <main>
         <div id="introduction">
-            <div>
+            <div data-aos="fade-up-right">
                 <h1>Une petite présentation de moi</h1>
                 <p>Je m'apelle Baptiste AGERON, étudiant à Digital Campus en Prépa Master. Titulaire d'un DUT
                     INFORMATIQUE fait à l'IUT d'Annecy.<br>N'hésitez pas à télécharger mon CV pour plus d'informations
@@ -58,17 +59,17 @@
                     </a>
                 </div>
             </div>
-            <div>
+            <div data-aos="fade-up-left">
                 <img src="./images/moi.jpg" alt="">
             </div>
         </div>
 
         <div id="talents">
-            <h1>Mes talents</h1>
+            <h1 data-aos="fade-up">Mes talents</h1>
             <div>
                 <ul class="skills-bar-container">
-                    <h1>Compétences Techniques</h1>
-                    <li>
+                    <h1 data-aos="fade-right">Compétences Techniques</h1>
+                    <li data-aos="zoom-in-up">
                         <div class="progressbar-title">
                             <h3>HTML / CSS</h3>
                         </div>
@@ -76,7 +77,7 @@
                             <span class="progressbar progressred" id="progress-html"></span>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="zoom-in-up">
                         <div class="progressbar-title">
                             <h3>JavaScript / jQuery</h3>
                         </div>
@@ -85,7 +86,7 @@
                         </div>
                     </li>
 
-                    <li>
+                    <li data-aos="zoom-in-up">
                         <div class="progressbar-title">
                             <h3>PHP</h3>
                         </div>
@@ -94,7 +95,7 @@
                         </div>
                     </li>
 
-                    <li>
+                    <li data-aos="zoom-in-up">
                         <div class="progressbar-title">
                             <h3>Java / C#</h3>
                         </div>
@@ -103,7 +104,7 @@
                         </div>
                     </li>
 
-                    <li>
+                    <li data-aos="zoom-in-up">
                         <div class="progressbar-title">
                             <h3>PL/SQL</h3>
                         </div>
@@ -113,8 +114,8 @@
                     </li>
                 </ul>
                 <ul class="skills-bar-container">
-                    <h1>Designs</h1>
-                    <li>
+                    <h1 data-aos="fade-left">Designs</h1>
+                    <li data-aos="zoom-in-up">
                         <div class="progressbar-title">
                             <h3>Adobe XD</h3>
                         </div>
@@ -122,7 +123,7 @@
                             <span class="progressbar progressgreen" id="progress-html"></span>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="zoom-in-up">
                         <div class="progressbar-title">
                             <h3>Figma</h3>
                         </div>
@@ -131,7 +132,7 @@
                         </div>
                     </li>
 
-                    <li>
+                    <li data-aos="zoom-in-up">
                         <div class="progressbar-title">
                             <h3>Illustrator</h3>
                         </div>
@@ -140,7 +141,7 @@
                         </div>
                     </li>
 
-                    <li>
+                    <li data-aos="zoom-in-up">
                         <div class="progressbar-title">
                             <h3>Photoshop</h3>
                         </div>
@@ -154,24 +155,23 @@
         </div>
 
         <div id="projets">
-            <h1>Mes projets</h1>
-
+            <h1 data-aos="fade-up">Mes projets</h1>
             <div>
-                <div onclick="openNav(firstp)">
+                <div onclick="openNav(firstp)" data-aos="zoom-out-up">
                     <img src="./images/projets/creacuisine_logo.png" alt="">
                     <p>Projet ayant pour but de crée un site professionnel pour une entreprise réaliser au cours de
                         l'année 2019</p>
                 </div>
-                <div onclick="openNav(secondep)">
+                <div onclick="openNav(secondep)" data-aos="zoom-out-up">
                     <img src="./images/projets/laravel_logo.png" alt="">
                     <p>Projet en équipe, notre but étais de copier le site de la fnac en utilisant le framework PHP
                         Laravel</p>
                 </div>
-                <div onclick="openNav(thirdp)">
+                <div onclick="openNav(thirdp)" data-aos="zoom-out-up">
                     <img src="./images/projets/sfml_logo.png" alt="">
                     <p>Projet d'équipe .Jeu de puzzle d'image. Développé en C/C++ en utilisant la bibliothèque SFML.</p>
                 </div>
-                <div onclick="openNav(fourthp)">
+                <div onclick="openNav(fourthp)" data-aos="zoom-out-up">
                     <img src="./images/projets/unity_logo.png" alt="">
                     <p>Projet d'équipe, jeux de stratégie 3d/2d. Développé en C# avec le logiciel Unity.</p>
                 </div>
@@ -276,6 +276,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
     <script src="js/https _unpkg.com_swiper@6.4.15_swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
 
