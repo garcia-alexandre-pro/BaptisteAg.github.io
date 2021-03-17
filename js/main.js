@@ -43,6 +43,7 @@ let nav = document.querySelectorAll("header li a")
 
 nav.forEach(element => {
     element.addEventListener('click', function () {
+        document.body.style.overflowY = "";
         if (window.innerWidth < 700) {
             const scrollY = document.body.style.top;
             document.body.style.position = '';
@@ -61,7 +62,6 @@ nav.forEach(element => {
                 behavior: "smooth"
             });
         }
-        document.body.style.overflowY = "";
     })
 });
 checkbox.addEventListener('change', function () {
