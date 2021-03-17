@@ -44,14 +44,12 @@ let nav = document.querySelectorAll("header li a")
 nav.forEach(element => {
     element.addEventListener('click', function () {
         document.body.style.overflowY = "";
-        if (window.innerWidth < 700) {
-            const scrollY = document.body.style.top;
-            document.body.style.position = '';
-            document.body.style.top = '';
-            checkbox.checked = false;
-            window.scrollTo(0, parseInt(scrollY || '0') * -1);
-        }
         let name = document.querySelector('#' + element.name)
+
+        if (window.innerWidth < 700) {
+            checkbox.checked = false;
+        }
+        
         if (name.id == "introduction") {
             window.scrollTo({
                 top: 0,
