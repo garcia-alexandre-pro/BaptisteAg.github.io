@@ -652,12 +652,12 @@ footer p {
     main {
         padding: 5vw;
         padding-top: 10vh;
-        background: linear-gradient(270deg, #0b0b0b, #212121, #0b0b0b, #212121, #0b0b0b, #212121);
+        /* background: linear-gradient(270deg, #0b0b0b, #212121, #0b0b0b, #212121, #0b0b0b, #212121);
         background-size: 1200% 1200%;
         -webkit-animation: BackgroundGradiant 30s ease infinite;
         -moz-animation: BackgroundGradiant 30s ease infinite;
         -o-animation: BackgroundGradiant 30s ease infinite;
-        animation: BackgroundGradiant 30s ease infinite;
+        animation: BackgroundGradiant 30s ease infinite; */
     }
     header {
         background-color: #1E1E23;
