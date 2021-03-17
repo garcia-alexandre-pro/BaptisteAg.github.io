@@ -4,6 +4,21 @@ if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
     document.body.appendChild(scriptDesktop);
 }
 
+var granimInstance = new Granim({
+    element: '#canvas-basic',
+    direction: 'diagonal',
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+            gradients: [
+                ['#200122', '#6f0000'],
+                ['#000000', '#434343'],
+                ['#0F2027', '#203A43']
+            ]
+        }
+    }
+});
+
 AOS.init();
 
 var swiper = new Swiper('.swiper-container', {
