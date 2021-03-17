@@ -4,6 +4,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     height: 100%;
     background-color: black;
+    overflow-x: hidden;
     /* background: linear-gradient(270deg, #0b0b0b, #212121, #0b0b0b, #212121, #0b0b0b, #212121);
     background-size: 1200% 1200%;
     -webkit-animation: BackgroundGradiant 30s ease infinite;
@@ -671,7 +672,6 @@ footer p {
         padding: 0;
         flex-direction: row;
         align-items: center;
-        backdrop-filter: blur(2px);
     }
     header img {
         width: 15vw;
