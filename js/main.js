@@ -82,10 +82,9 @@ function openNav(id) {
     let thisuse = document.getElementById("fullscreenProjet").querySelector("div:not(.hidden).ndhidden");
     let projtogg = document.getElementById(id.id);
     if (thisuse !== null) {
-
         thisuse.classList.toggle("hidden");
-
     };
+    
     projtogg.classList.toggle("hidden");
     document.body.style.overflowY = "hidden";
     fullscreenProjet.style.width = "100%";
