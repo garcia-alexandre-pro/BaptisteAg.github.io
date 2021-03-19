@@ -358,7 +358,7 @@ footer p {
         padding-top: 10vh;
     }
     header {
-        background-color: rgba(30, 30, 35, 99%);
+        background-color: rgba(0, 0, 0, 90%);
         height: 10vh;
         display: flex;
         position: fixed;
