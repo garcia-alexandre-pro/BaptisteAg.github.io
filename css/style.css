@@ -87,6 +87,7 @@ header nav a:hover:after {
     position: static;
     height: 18vh;
     display: none;
+    content: "";
 }
 
 /* \\HEADER\\ */
