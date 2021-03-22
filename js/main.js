@@ -34,8 +34,6 @@ var swiper = new Swiper('.swiper-container', {
     // loop: true,
 });
 
-
-
 let checkbox = document.querySelector("header nav input")
 checkbox.checked = false;
 let nav = document.querySelectorAll("header li a ,header img")
@@ -71,7 +69,7 @@ checkbox.addEventListener('change', function () {
 
 Swal.fire(
     'Bienvenue !',
-    'Mon portfolio est toujours en cours de développement (surtout la partie "Mes projets") et évolue au fil des jours.<br>Merci de votre indulgence 🙂<br><br>Mon téléphone : 06 62 43 09 40 📱',
+    'Mon portfolio est à votre disposition et évolue au fil des jours.<br>J\'attend votre appel 🙂<br><br>Mon téléphone : 06 62 43 09 40 📱',
     'info'
 )
 
