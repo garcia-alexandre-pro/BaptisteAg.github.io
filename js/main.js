@@ -31,7 +31,7 @@ var swiper = new Swiper('.swiper-container', {
         delay: 5000,
         disableOnInteraction: true,
     },
-    loop: true,
+    // loop: true,
 });
 
 
