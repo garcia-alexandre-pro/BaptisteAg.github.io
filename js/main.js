@@ -1,8 +1,8 @@
-// if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     let scriptDesktop = document.createElement("script");
     scriptDesktop.setAttribute("src", "js/desktop.js");
     document.body.appendChild(scriptDesktop);
-// }
+}
 
 AOS.init();
 var granimInstance = new Granim({
@@ -31,14 +31,14 @@ var swiper = new Swiper('.swiper-container', {
         delay: 5000,
         disableOnInteraction: true,
     },
-    // loop: true,
+    loop: true,
 });
 
 
 
 let checkbox = document.querySelector("header nav input")
 checkbox.checked = false;
-let nav = document.querySelectorAll("header li a")
+let nav = document.querySelectorAll("header li a ,header img")
 
 nav.forEach(element => {
     element.addEventListener('click', function () {
