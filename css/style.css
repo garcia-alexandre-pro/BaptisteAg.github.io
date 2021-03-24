@@ -511,6 +511,6 @@ footer p {
         flex-direction: column;
     }
     .swal2-container{
-       width: 95vw; 
+       max-width: 95vw; 
     }
 }
