@@ -510,4 +510,7 @@ footer p {
     #projets>div:nth-of-type(1) {
         flex-direction: column;
     }
+    .swal2-container{
+       width: 95vw; 
+    }
 }
