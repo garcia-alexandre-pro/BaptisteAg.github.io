@@ -359,6 +359,7 @@ footer p {
     main {
         padding: 5vw;
         padding-top: 10vh;
+        overflow-x: hidden;
     }
     header {
         background-color: rgba(0, 0, 0, 90%);
