@@ -257,18 +257,18 @@ header nav a:hover:after {
     z-index: 5;
 }
 
-/* #firstp, #secondep, #thirdp, #fourthp {
-    visibility: hidden;
-    position:;
-} */
-
 .swiper-container {
     width: 80vw;
 }
 
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
 .swiper-slide img {
-    height: 100%;
     width: 100%;
+    object-fit: contain;
 }
 
 /* \\PROJETS\\ */
@@ -349,6 +349,7 @@ footer p {
         width: 50vw;
     }
 }
+
 @media only screen and (max-width: 700px) {
     body {
         margin: 0;
