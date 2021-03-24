@@ -237,12 +237,8 @@ header nav a:hover:after {
 }
 
 #fullscreenProjet a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+    font-size: 1.3em;
+    color: #007aff;
 }
 
 #fullscreenProjet a:hover, #fullscreenProjet a:focus {
@@ -250,6 +246,11 @@ header nav a:hover:after {
 }
 
 #fullscreenProjet>a {
+    padding: 8px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
     position: absolute;
     top: 20px;
     right: 45px;
