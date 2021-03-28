@@ -131,6 +131,7 @@ header nav a:hover:after {
     width: 50vw;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 #introduction div:nth-child(2) img {
