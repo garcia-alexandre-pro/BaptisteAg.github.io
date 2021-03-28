@@ -330,6 +330,7 @@ footer p {
     text-decoration: none;
     color: white;
     transition: 0.3s;
+    height: 1.3em;
 }
 
 .greybutton:hover {
