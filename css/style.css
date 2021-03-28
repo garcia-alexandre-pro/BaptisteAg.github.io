@@ -313,7 +313,6 @@ footer p {
     text-decoration: none;
     color: black;
     transition: 0.3s;
-    height: 1.3em;
 }
 
 .button:hover {
@@ -330,7 +329,6 @@ footer p {
     text-decoration: none;
     color: white;
     transition: 0.3s;
-    height: 1.3em;
 }
 
 .greybutton:hover {
@@ -341,6 +339,7 @@ footer p {
 .greybutton svg, .button svg {
     width: 1em;
     margin-left: 10PX;
+    height: 100%;
 }
 
 .greybutton:hover svg, .button:hover svg {
