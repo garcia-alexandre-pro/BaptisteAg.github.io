@@ -68,11 +68,11 @@ checkbox.addEventListener('change', function () {
     }
 });
 
-// Swal.fire(
-//     'Bienvenue !',
-//     'Mon portfolio est à votre disposition et évolue au fil des jours.<br>J\'attends votre appel 🙂<br><br>Mon téléphone : 06 62 43 09 40 📱',
-//     'info'
-// )
+Swal.fire(
+    'Bienvenue !',
+    'Mon portfolio est à votre disposition et évolue au fil des jours.<br>J\'attends votre appel 🙂<br><br>Mon téléphone : 06 62 43 09 40 📱',
+    'info'
+)
 
 let fullscreenProjet = document.querySelector("#fullscreenProjet")
 
