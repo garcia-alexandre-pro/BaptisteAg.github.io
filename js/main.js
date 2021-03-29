@@ -9,7 +9,7 @@ var granimInstance = new Granim({
     element: '#canvas-basic',
     direction: 'diagonal',
     isPausedWhenNotInView: true,
-    states : {
+    states: {
         "default-state": {
             gradients: [
                 ['#200122', '#6f0000'],
@@ -19,20 +19,21 @@ var granimInstance = new Granim({
         }
     }
 });
-var swiper = new Swiper('.swiper-container', {
-    pagination: {
-        el: '.swiper-pagination'
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: true,
-    },
-    // loop: true,
-});
+// var swiper = new Swiper('.swiper-container', {
+//     pagination: {
+//         el: '.swiper-pagination'
+//     },
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//     },
+//     autoplay: {
+//         delay: 5000,
+//         disableOnInteraction: true,
+//     },
+//     // loop: true,
+// });
+
 
 let checkbox = document.querySelector("header nav input")
 checkbox.checked = false;
@@ -46,7 +47,7 @@ nav.forEach(element => {
         if (window.innerWidth < 700) {
             checkbox.checked = false;
         }
-        
+
         if (name.id == "introduction") {
             window.scrollTo({
                 top: 0,
@@ -67,11 +68,11 @@ checkbox.addEventListener('change', function () {
     }
 });
 
-Swal.fire(
-    'Bienvenue !',
-    'Mon portfolio est à votre disposition et évolue au fil des jours.<br>J\'attends votre appel 🙂<br><br>Mon téléphone : 06 62 43 09 40 📱',
-    'info'
-)
+// Swal.fire(
+//     'Bienvenue !',
+//     'Mon portfolio est à votre disposition et évolue au fil des jours.<br>J\'attends votre appel 🙂<br><br>Mon téléphone : 06 62 43 09 40 📱',
+//     'info'
+// )
 
 let fullscreenProjet = document.querySelector("#fullscreenProjet")
 
@@ -90,4 +91,9 @@ function openNav(id) {
 function closeNav() {
     document.body.style.overflowY = "";
     fullscreenProjet.style.width = "0%";
+}
+
+var elmssplide = document.getElementsByClassName('splide');
+for (var i = 0, len = elmssplide.length; i < len; i++) {
+    new Splide(elmssplide[i]).mount();
 }

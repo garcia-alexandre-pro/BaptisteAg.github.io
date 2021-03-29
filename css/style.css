@@ -232,9 +232,9 @@ header nav a:hover:after {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 0 5%;
     height: 100vh;
+    text-align: center;
 }
 
 #fullscreenProjet a {
@@ -306,6 +306,26 @@ footer p {
     display: none;
 }
 
+.splide {
+    display: grid;
+    max-height: 90vh;
+}
+
+.splide__list{
+    height: 100%;
+    width: 100%;
+}
+.splide__slide {
+    display: flex;
+    justify-content: center;
+    width: inherit !important;
+}
+
+.splide__slide img {
+    width: 100%;
+    object-fit: contain;
+}
+
 .button {
     background-color: #74FECB;
     border-radius: 10px;
@@ -369,7 +389,6 @@ footer p {
     top: 10px;
     left: 12px;
     animation: scrolls 1.3s ease-out infinite;
-    /* Chrome, Safari, Opera */
 }
 
 @keyframes scrolls {

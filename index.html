@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baptiste Ageron</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skills.css">
@@ -198,7 +199,28 @@
 
                 <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
 
-                <div id="firstp" class="hidden ndhidden">
+                <div id="firstp" class="ndhidden hidden">
+                    <div class="splide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src="./images/projets/creacuisine_website.png" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./images/projets/creacuisine_website2.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>
+                        Avec un groupe de 5 étudiants,
+                        nous avons créé un site de e-commerce pour l'entreprise Créa-Cuisine. Ce projet, rémunéré par
+                        le professionnel, s'est réalisé sur 4 mois.
+                        Nous avons utilisé le CMS wordpress.
+                    </p>
+                </div>
+
+                <!-- <div id="firstp" class="hidden ndhidden">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -218,7 +240,7 @@
                         le professionnel, s'est réalisé sur 4 mois.
                         Nous avons utilisé le CMS wordpress.
                     </p>
-                </div>
+                </div> -->
 
                 <div id="secondep" class="hidden ndhidden">
                     <div class="swiper-container">
@@ -284,24 +306,22 @@
                     </p>
                 </div>
 
-                <div id="fifthp" class="hidden ndhidden">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="./images/projets/bonneplace_model.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./images/projets/bonneplace_color.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./images/projets/bonneplace_font.png" alt="">
-                            </div>
+                <div id="fifthp" class="ndhidden hidden">
+                    <div class="splide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src="./images/projets/bonneplace_model.png" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./images/projets/bonneplace_font.png" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./images/projets/bonneplace_color.png" alt="">
+                                </li>
+                            </ul>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
                     </div>
-
                     <p>
                         Projet d’équipe d’une durée de 6 mois sur la demande d’un professionnel en partenariat avec
                         Digital Campus. Nouvelle création sans aucun existant, groupe arrivé premier aux grands projets
@@ -309,13 +329,15 @@
                         maquette en version mobile (Extrait juste au-dessus).
                     </p>
                 </div>
+
             </div>
     </main>
     <footer>
         <p>Développé sans CMS, uniquement en html, css et javacript.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
-    <script src="js/https _unpkg.com_swiper@6.4.15_swiper-bundle.min.js"></script>
+    <!-- <script src="js/https _unpkg.com_swiper@6.4.15_swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/granim.min.js"></script>
     <script src="js/main.js"></script>
