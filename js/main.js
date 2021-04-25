@@ -1,6 +1,5 @@
-window.onload = function() {
-    let loader = document.querySelector(".loader")
-    fade(elem)
+window.onload = function () {
+    document.querySelector(".loader").remove()
 
     Swal.fire(
         'Bienvenue !',
