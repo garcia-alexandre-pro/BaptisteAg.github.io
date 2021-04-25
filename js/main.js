@@ -1,3 +1,15 @@
+window.onload = function() {
+    let loader = document.querySelector(".loader")
+    fade(elem)
+
+    Swal.fire(
+        'Bienvenue !',
+        'Mon portfolio est à votre disposition et évolue au fil des jours.<br>J\'attends votre appel 🙂<br><br>Mon téléphone : 06 62 43 09 40 📱',
+        'info'
+    )
+    document.querySelector("body").style.overflowY = "visible"
+}
+
 if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     let scriptDesktop = document.createElement("script");
     scriptDesktop.setAttribute("src", "js/desktop.js");
@@ -53,12 +65,6 @@ checkbox.addEventListener('change', function () {
         document.body.style.overflowY = "";
     }
 });
-
-Swal.fire(
-    'Bienvenue !',
-    'Mon portfolio est à votre disposition et évolue au fil des jours.<br>J\'attends votre appel 🙂<br><br>Mon téléphone : 06 62 43 09 40 📱',
-    'info'
-)
 
 let fullscreenProjet = document.querySelector("#fullscreenProjet")
 
