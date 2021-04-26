@@ -1,4 +1,6 @@
 window.onload = function () {
+    AOS.init();
+    window.scrollTo(0,0);
     document.querySelector(".loader").remove()
 
     Swal.fire(
@@ -6,7 +8,6 @@ window.onload = function () {
         'Mon portfolio est à votre disposition et évolue au fil des jours.<br>J\'attends votre appel 🙂<br><br>Mon téléphone : 06 62 43 09 40 📱',
         'info'
     )
-    document.querySelector("body").style.overflowY = "visible"
 }
 
 if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -15,7 +16,6 @@ if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
     document.body.appendChild(scriptDesktop);
 }
 
-AOS.init();
 var granimInstance = new Granim({
     element: '#canvas-basic',
     direction: 'diagonal',
