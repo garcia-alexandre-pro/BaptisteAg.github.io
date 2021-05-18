@@ -6,11 +6,23 @@ html {
 }
 body {
     padding: 5vh 5vw;
+}
+
+body > div {
     display: flex;
-    justify-content: space-around;
+    width: 90vw;
+    justify-content: space-between;
+}
+
+body > section {
+    width: 80vw;
+}
+
+.downloadlist {
+    display: block ruby;
 }
 
 a {
     color: #1C00C0;
-    margin-right: 10px;
+    margin-left: 10px;
 }

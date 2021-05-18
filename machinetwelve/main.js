@@ -5,11 +5,11 @@ $(document).ready(function () {
         if (lien !== "") 
         {
             window.alert("Attends un peu...");
-            $("#resultat").text("En cours de déchiffrement");
+            $(".downloadlist div").text("En cours de déchiffrement");
             $.getJSON(
                 'https://api.alldebrid.com/v4/link/unlock?agent=LinkOk&apikey=yzDd2zmszOk2lDbxsyeb&link=' + lien,
                 function (data) {
-                    $("#resultat").text(data.data.filename);
+                    $(".downloadlist div").text(data.data.filename);
                     $("#resultat").attr("href", data.data.link);
                 },
             );
@@ -29,6 +29,7 @@ $(document).ready(function () {
             document.execCommand("copy");
             document.body.removeChild(tempInput);
             document.execCommand("copy");
+            alert("Lien copié");
         } else {
             alert("La machine n'a trouvé aucun lien :C");
         }

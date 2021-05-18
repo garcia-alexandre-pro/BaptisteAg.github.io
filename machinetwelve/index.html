@@ -9,55 +9,52 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="12.ico" type="image/x-icon">
 </head>
 
 <body>
+    <div>
+        <section>
+            <div>
+                <h1>Le pouvoir du PREMIUM</h1>
+
+                <form>
+                    <p>
+                        Lien : <input type="text" id="link">
+                        <input type="submit" id="submit" value="➜ 12" />
+                    </p>
+                </form>
+            </div>
+        </section>
+        <section>
+            <h3>Changelog :</h3>
+            <ul>
+                <li>v 1 :
+                    <ul>
+                        <li>Init release</li>
+                    </ul>
+                </li>
+                <li>v 1.1 :
+                    <ul>
+                        <li>Add changelog</li>
+                        <li>Add Copy button</li>
+                        <li>Small interface update</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
     <section>
-        <div>
-            <h1>Le pouvoir du PREMIUM</h1>
-            <h5>(Bientôt en version streaming)</h5>
-
-            <form>
-                <p>
-                    Lien : <input type="text" id="link">
-                    <input type="submit" id="submit" value="➜ 12" />
-                </p>
-            </form>
-        </div>
-
-        <br><br>
-
         <h2>Téléchargement :</h2>
 
-        <a href="" id="resultat">La machine n'a pas encore fonctionné...</a>
-        <button id="copy">Copier le lien</button>
-
-
-        <!-- <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg"
-        data-setup="{}">
-        <source src="MY_VIDEO.mp4" type="video/mp4" />
-        <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a
-            web browser that
-            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-        </p>
-    </video> -->
-    </section>
-    <section>
-        <h3>Changelog :</h3>
-        <ul>
-            <li>v 1 :
-                <ul>
-                    <li>Init release</li>
-                </ul>
-            </li>
-            <li>v 1.1 :
-                <ul>
-                    <li>Add changelog</li>
-                    <li>Add Copy button</li>
-                </ul>
-            </li>
-        </ul>
+        <div class="downloadlist">
+            <div>La machine n'a pas encore fonctionné...</div>
+            <a href="" id="resultat">
+                <button>Télécharger</button>
+            </a>
+            <button id="copy">Copier le lien</button>
+            <button disabled>Streaming (bientôt)</button>
+        </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
