@@ -6,4 +6,11 @@ html {
 }
 body {
     padding: 5vh 5vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    color: #1C00C0;
+    margin-right: 10px;
 }

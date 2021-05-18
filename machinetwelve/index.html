@@ -12,21 +12,28 @@
 </head>
 
 <body>
-    <div>
-        <h1>Le pouvoir du PREMIUM</h1>
-        <h5>(Bientôt en version streaming)</h5>
-        <form>
-            <p>
-                Lien : <input type="text" id="link" />
-                <input type="submit" id="submit" value="➜ 12" />
-            </p>
-        </form>
-    </div>
-    <br><br>
-    <h2>Téléchargement :</h2>
-    <a href="" id="resultat"></a>
+    <section>
+        <div>
+            <h1>Le pouvoir du PREMIUM</h1>
+            <h5>(Bientôt en version streaming)</h5>
 
-    <!-- <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg"
+            <form>
+                <p>
+                    Lien : <input type="text" id="link">
+                    <input type="submit" id="submit" value="➜ 12" />
+                </p>
+            </form>
+        </div>
+
+        <br><br>
+
+        <h2>Téléchargement :</h2>
+
+        <a href="" id="resultat">La machine n'a pas encore fonctionné...</a>
+        <button id="copy">Copier le lien</button>
+
+
+        <!-- <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg"
         data-setup="{}">
         <source src="MY_VIDEO.mp4" type="video/mp4" />
         <p class="vjs-no-js">
@@ -35,29 +42,26 @@
             <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
         </p>
     </video> -->
-
+    </section>
+    <section>
+        <h3>Changelog :</h3>
+        <ul>
+            <li>v 1 :
+                <ul>
+                    <li>Init release</li>
+                </ul>
+            </li>
+            <li>v 1.1 :
+                <ul>
+                    <li>Add changelog</li>
+                    <li>Add Copy button</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
-<script>
-
-    $(document).ready(function () {
-
-        $("#submit").click(function (e) {
-            e.preventDefault();
-
-            $.getJSON(
-                'https://api.alldebrid.com/v4/link/unlock?agent=LinkOk&apikey=yzDd2zmszOk2lDbxsyeb&link=' + $("#link").val(),
-                function (data) {
-                    window.alert("Attends un peu");
-                    $("#resultat").text(data.data.filename);
-                    $("#resultat").attr("href", data.data.link);
-                    
-                },
-            );
-        });
-    });
-
-</script>
