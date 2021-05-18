@@ -14,6 +14,7 @@ $(document).ready(function () {
         var lien = $("#link").val();
         if (lien !== "") {
             DownloadList.LinkReceived = false
+            DownloadList.CopyButton = 'Copier le lien'
             DownloadList.Message = 'En cours de déchiffrement...'
             $.getJSON(
                 'https://api.alldebrid.com/v4/link/unlock?agent=LinkOk&apikey=yzDd2zmszOk2lDbxsyeb&link=' + lien,
