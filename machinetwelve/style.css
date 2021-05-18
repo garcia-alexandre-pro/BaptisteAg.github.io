@@ -2,27 +2,58 @@
 html {
     background-color: #232323;
     font-family: 'Pattaya', sans-serif;
-    color: white;
+    color: #BFC20A;
 }
+
 body {
     padding: 5vh 5vw;
 }
 
-body > div {
+body>div {
     display: flex;
     width: 90vw;
     justify-content: space-between;
 }
 
-body > section {
+body>section {
     width: 80vw;
 }
 
-.downloadlist {
-    display: block ruby;
+#downloadList {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 20vh;
 }
 
-a {
-    color: #1C00C0;
-    margin-left: 10px;
+.buttonsList {
+    display: flex;
+}
+
+.buttons {
+    background-color: #6AB482;
+    text-decoration: none;
+    padding: 5px 8px;
+    color: black;
+    transition: 0.2s;
+    border-radius: 3px;
+    border: none;
+    margin-right: 10px;
+}
+
+.bcopy {
+    background-color: #8F754F;
+}
+
+.buttons:hover {
+    cursor: pointer;
+    background-color: #92D5E6;
+}
+
+#streamingList {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 20vh;
+    justify-content: space-evenly;
 }

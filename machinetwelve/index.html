@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untimate 12</title>
+    <title>Untimate 12 (v1.2)</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
     <link rel="shortcut icon" href="12.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" /> -->
 </head>
 
 <body>
@@ -17,11 +18,10 @@
         <section>
             <div>
                 <h1>Le pouvoir du PREMIUM</h1>
-
                 <form>
                     <p>
                         Lien : <input type="text" id="link">
-                        <input type="submit" id="submit" value="➜ 12" />
+                        <input type="submit" class="buttons" id="submit" value="➜ 12" />
                     </p>
                 </form>
             </div>
@@ -41,23 +41,61 @@
                         <li>Small interface update</li>
                     </ul>
                 </li>
+                <li>v 1.2 :
+                    <ul>
+                        <li>Creation of a dynamic interface</li>
+                        <li>Performance improvement</li>
+                    </ul>
+                </li>
             </ul>
         </section>
     </div>
     <section>
         <h2>Téléchargement :</h2>
-
-        <div class="downloadlist">
-            <div>La machine n'a pas encore fonctionné...</div>
-            <a href="" id="resultat">
-                <button>Télécharger</button>
-            </a>
-            <button id="copy">Copier le lien</button>
-            <button disabled>Streaming (bientôt)</button>
+        <div id="downloadList">
+            <div style="margin-bottom: 5px;">{{ Message }}</div>
+            <br>
+            <div v-if="LinkReceived" class="buttonsList">
+                <a class="buttons" :href="Link" id="resultat">Télécharger</a>
+                <button onclick="copyLink()" class="buttons bcopy" id="copy">{{ CopyButton }}</button>
+            </div>
         </div>
+
+
+    </section>
+    <section style="display: none;">
+        <div id="streamingList">
+            <h2>Streaming :</h2>
+            <select name="streamqual">
+                <option value="">La machine n'a pas encore fonctionné...</option>
+            </select>
+        </div>
+
+        <body>
+            <video
+              id="my-video"
+              class="video-js"
+              controls
+              preload="auto"
+              width="640"
+              height="264"
+              poster="MY_VIDEO_POSTER.jpg"
+              data-setup="{}"
+            >
+              <source src="https://www38.uptostream.com/4491pk22193/720/0/video.mp4" type="video/mp4" />
+              <source src="https://www38.uptostream.com/4491pk22193/480/1/video.mp4" type="video/mp4" />
+              <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank"
+                  >supports HTML5 video</a
+                >
+              </p>
+            </video>
+
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+    <!-- <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script> -->
     <script src="main.js"></script>
 </body>
 

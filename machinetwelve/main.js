@@ -1,38 +1,44 @@
+var DownloadList = new Vue({ 
+    el: '#downloadList',
+    data: {
+        Message: 'La machine n\'a pas encore fonctionné...',
+        Link : '',
+        LinkReceived : false,
+        CopyButton : 'Copier le lien'
+    }
+});
+
 $(document).ready(function () {
     $("#submit").click(function (e) {
         e.preventDefault();
         var lien = $("#link").val();
-        if (lien !== "") 
-        {
-            window.alert("Attends un peu...");
-            $(".downloadlist div").text("En cours de déchiffrement");
+        if (lien !== "") {
+            DownloadList.LinkReceived = false
+            DownloadList.Message = 'En cours de déchiffrement...'
             $.getJSON(
                 'https://api.alldebrid.com/v4/link/unlock?agent=LinkOk&apikey=yzDd2zmszOk2lDbxsyeb&link=' + lien,
                 function (data) {
-                    $(".downloadlist div").text(data.data.filename);
-                    $("#resultat").attr("href", data.data.link);
+                    if (data.data !== undefined) {
+                        DownloadList.Message = data.data.filename
+                        DownloadList.Link = data.data.link
+                        DownloadList.LinkReceived = true
+                    } else {
+                        DownloadList.Message = 'Erreur : Lien invalide/hébergeur non supporté'
+                    }
                 },
             );
         } else {
-            alert("Il est ou le lien ?" + lien);
+            DownloadList.Message = 'Il est ou le lien ?'
         }
-    });
-
-    $("#copy").click(function () {
-        let copyText = $("#resultat").attr("href");
-        if (copyText !== "")
-        {
-            let tempInput = document.createElement("input");
-            tempInput.value = copyText;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-            document.execCommand("copy");
-            alert("Lien copié");
-        } else {
-            alert("La machine n'a trouvé aucun lien :C");
-        }
-        
     });
 });
+
+function copyLink() {
+    let tempInput = document.createElement("input");
+    tempInput.value = DownloadList.Link;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    DownloadList.CopyButton = 'Lien copié';
+}
