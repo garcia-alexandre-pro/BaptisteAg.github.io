@@ -18,20 +18,19 @@ section {
 
 #videoplayer {
     width: 100%;
-    height: auto;
 }
 
 #changelogSection ul {
     color: wheat;
 }
 
-#linkSection form, #streamingList .form {
+#linkSection .form, #streamingList .form {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 90%;
 }
 
-#linkSection form>*, #streamingList .form>* {
+#linkSection .form>*, #streamingList .form>* {
     margin-top: 10px;
 }
 
@@ -46,6 +45,10 @@ section {
 #downloadList div:first-child {
     margin-bottom: 10px;
     color: wheat;
+}
+
+#videoplayerid {
+    width: 100%;
 }
 
 .buttonsList {

@@ -25,19 +25,19 @@ var StreamingList = new Vue({
                 'https://api.alldebrid.com/v4/link/streaming?agent=LinkOk&apikey=yzDd2zmszOk2lDbxsyeb&id=' + StreamingList.Id + '&stream=' + $("#streamqual").val(),
                 function (data) {
                     StreamingList.LinkClear = data.data.link
+                    StreamingList.VisiblePlayer = true
                     StreamingList.StreamQualityReceived = false
                     DownloadList.LinkReceived = false
-                    StreamingList.VisiblePlayer = true
-                    StreamingList.Message = 'Pour changer de qualité, le lien doit être re générer.'
+                    StreamingList.Message = 'Pour changer de qualité/changer d\'épisode, la page doit étre rechargé (Réglé dans la prochaine maj).'
                     DownloadList.Message = 'Pour télécharger le ficher, le lien doit être re générer.'
                 },
             )
         }
     },
     updated: function () {
-        if (typeof videoplayer === 'undefined' && StreamingList.VisiblePlayer) {
+        if (typeof videoplayer === 'undefined') {
             this.$nextTick(function () {
-                var videoplayer = videojs('videoplayer');
+                var videoplayer = videojs('videoplayerid');
             })
         }
     }
@@ -45,7 +45,6 @@ var StreamingList = new Vue({
 
 $(document).ready(function () {
     $("#submitlink").click(function (e) {
-        e.preventDefault();
         var lien = $("#linkInput").val();
         if (lien !== "") {
             DownloadList.LinkReceived = false

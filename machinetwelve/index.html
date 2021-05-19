@@ -16,11 +16,11 @@
 <body>
     <section id="linkSection">
         <h1>Le pouvoir du PREMIUM</h1>
-        <form>
+        <div class="form">
             <label for="linkInput">Lien : </label>
             <input type="text" id="linkInput" name="linkInput">
             <button class="buttons" id="submitlink">➜ 12</button>
-        </form>
+        </div>
     </section>
     <section id="downloadSection">
         <h2>Téléchargement :</h2>
@@ -36,13 +36,13 @@
         <h2>Streaming :</h2>
         
         <div class="form">
-            <label for="streamqual"> {{ Message }}</label>
+            <label for="streamqual"> {{ Message }} </label>
             <select v-if="StreamQualityReceived" id="streamqual" name="streamqual">
                 <option v-for="quality in QualitysList['0']" :value="quality.id">{{ quality.id }}</option>
             </select>
             <button v-if="StreamQualityReceived" v-on:click="getLink" class="buttons" id="submitstream">➜ 12</button>
         </div>
-        <video class="video-js" id="videoplayer" v-if="VisiblePlayer" controls autoplay>
+        <video class="video-js" id="videoplayerid" v-if="VisiblePlayer" controls autoplay>
             <source :src="LinkClear" type="video/mp4" />
             <track v-for="sub in SubtitlesList['0']" :src="sub.src" kind="captions" :srclang="sub.name"
                 :label="sub.label">
