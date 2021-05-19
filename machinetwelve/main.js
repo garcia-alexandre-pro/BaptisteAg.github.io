@@ -16,7 +16,6 @@ var StreamingList = new Vue({
         LinkClear: null,
         QualitysList: [],
         SubtitlesList: [],
-        StreamClear: false,
         VisiblePlayer: false,
         StreamQualityReceived: false
     },
@@ -36,7 +35,7 @@ var StreamingList = new Vue({
         }
     },
     updated: function () {
-        if (typeof videoplayer === 'undefined') {
+        if (typeof videoplayer === 'undefined' && StreamingList.VisiblePlayer) {
             this.$nextTick(function () {
                 var videoplayer = videojs('videoplayer');
             })
