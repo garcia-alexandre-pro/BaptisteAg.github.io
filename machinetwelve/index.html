@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untimate 12 (v1.2)</title>
+    <title>Untimate 12 (v2.1)</title>
     <link rel="shortcut icon" href="12.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -37,10 +37,10 @@
         
         <div class="form">
             <label for="streamqual"> {{ Message }}</label>
-            <select v-if="StreamReceived" id="streamqual" name="streamqual">
+            <select v-if="StreamQualityReceived" id="streamqual" name="streamqual">
                 <option v-for="quality in QualitysList['0']" :value="quality.id">{{ quality.id }}</option>
             </select>
-            <button v-if="StreamReceived" v-on:click="getLink" class="buttons" id="submitstream">➜ 12</button>
+            <button v-if="StreamQualityReceived" v-on:click="getLink" class="buttons" id="submitstream">➜ 12</button>
         </div>
         <video class="video-js" id="videoplayer" v-if="VisiblePlayer" controls autoplay>
             <source :src="LinkClear" type="video/mp4" />

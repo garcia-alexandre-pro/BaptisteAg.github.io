@@ -2,9 +2,9 @@ var DownloadList = new Vue({
     el: '#downloadList',
     data: {
         Message: 'La machine n\'a pas encore fonctionné...',
-        Link: '',
-        LinkReceived: false,
-        CopyButton: 'Copier le lien'
+        CopyButton: 'Copier le lien',
+        Link: null,
+        LinkReceived: false
     }
 });
 
@@ -13,11 +13,12 @@ var StreamingList = new Vue({
     data: {
         Message: 'La machine n\'a pas encore fonctionné...',
         Id: null,
+        LinkClear: null,
         QualitysList: [],
         SubtitlesList: [],
         StreamClear: false,
-        LinkClear: null,
-        VisiblePlayer: false
+        VisiblePlayer: false,
+        StreamQualityReceived: false
     },
     methods: {
         getLink: function () {
@@ -25,9 +26,9 @@ var StreamingList = new Vue({
                 'https://api.alldebrid.com/v4/link/streaming?agent=LinkOk&apikey=yzDd2zmszOk2lDbxsyeb&id=' + StreamingList.Id + '&stream=' + $("#streamqual").val(),
                 function (data) {
                     StreamingList.LinkClear = data.data.link
-                    StreamingList.VisiblePlayer = true
-                    StreamingList.StreamReceived = false
+                    StreamingList.StreamQualityReceived = false
                     DownloadList.LinkReceived = false
+                    StreamingList.VisiblePlayer = true
                     StreamingList.Message = 'Pour changer de qualité, le lien doit être re générer.'
                     DownloadList.Message = 'Pour télécharger le ficher, le lien doit être re générer.'
                 },
@@ -35,9 +36,11 @@ var StreamingList = new Vue({
         }
     },
     updated: function () {
-        this.$nextTick(function () {
-            var videoplayer = videojs('videoplayer');
-        })
+        if (typeof videoplayer === 'undefined') {
+            this.$nextTick(function () {
+                var videoplayer = videojs('videoplayer');
+            })
+        }
     }
 });
 
@@ -55,15 +58,19 @@ $(document).ready(function () {
                 function (data) {
                     if (data.data !== undefined) {
                         DownloadList.Message = data.data.filename
-                        StreamingList.Message = "Qualité et langue (qual-lang) :"
                         DownloadList.Link = data.data.link
-                        StreamingList.QualitysList = []
-                        StreamingList.QualitysList.push(data.data.streams)
-                        StreamingList.SubtitlesList.push(data.data.subtitles)
-                        StreamingList.Id = data.data.id
                         DownloadList.LinkReceived = true
-                        StreamingList.StreamReceived = true
-                        StreamingList.VisiblePlayer = false
+                        if (data.data.streams !== undefined) {
+                            StreamingList.VisiblePlayer = false
+                            StreamingList.Message = "Qualité et langue (qual-lang) :"
+                            StreamingList.QualitysList = []
+                            StreamingList.QualitysList.push(data.data.streams)
+                            StreamingList.SubtitlesList.push(data.data.subtitles)
+                            StreamingList.Id = data.data.id
+                            StreamingList.StreamQualityReceived = true
+                        } else {
+                            StreamingList.Message = 'Erreur : Streaming non supporté'
+                        }
                     } else {
                         DownloadList.Message = 'Erreur : Lien invalide/hébergeur non supporté'
                     }
