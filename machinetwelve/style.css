@@ -6,28 +6,49 @@ html {
 }
 
 body {
-    padding: 5vh 5vw;
-}
-
-body>div {
+    padding: 2.5vh 2.5vw;
     display: flex;
-    width: 90vw;
-    justify-content: space-between;
 }
 
-body>section {
-    width: 80vw;
+section {
+    width: 45vw;
+}
+
+#changelogSection ul {
+    color: wheat;
+}
+
+#linkSection form, #streamingList div {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 40%;
+}
+
+#linkSection form>*, #streamingList div>* {
+    margin-top: 10px;
 }
 
 #downloadList {
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
-    height: 20vh;
+    width: 40%;
+}
+
+#streamingList label {
+    color: wheat;
+}
+
+#downloadList div:first-child {
+    margin-bottom: 10px;
+    color: wheat;
 }
 
 .buttonsList {
     display: flex;
+    justify-content: space-between;
+}
+
+.buttonsList>* {
+    width: 40%;
 }
 
 .buttons {
@@ -38,10 +59,7 @@ body>section {
     transition: 0.2s;
     border-radius: 3px;
     border: none;
-    margin-right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .bcopy {
@@ -53,46 +71,4 @@ body>section {
     background-color: #92D5E6;
 }
 
-#streamingList {
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
-    height: 20vh;
-    justify-content: space-evenly;
-}
-
-@media only screen and (max-width: 711px) {
-    body {
-        font-size: 4vw;
-    }
-    body>div {
-        flex-direction: column;
-        align-items: center;
-        width: 90vw;
-        justify-content: center;
-        text-align: center;
-    }
-    #changeLog {
-        display: none;
-    }
-    #downloadSection {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        width: 90vw;
-    }
-    .buttonsList {
-        align-self: center;
-    }
-    .buttons {
-        width: 100%;
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-        height: 30vh;
-        justify-content: space-evenly;
-    }
-}
+@media only screen and (max-width: 711px) {}

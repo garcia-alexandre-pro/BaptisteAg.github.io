@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+html {
+    background-color: #232323;
+    font-family: 'Pattaya', sans-serif;
+    color: #BFC20A;
+}
+
+body {
+    padding: 5vh 5vw;
+}
+
+body>div {
+    display: flex;
+    width: 90vw;
+    justify-content: space-between;
+}
+
+body>section {
+    width: 80vw;
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+}
+
+#downloadList {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 20vh;
+}
+
+.buttonsList {
+    display: flex;
+}
+
+.buttons {
+    background-color: #6AB482;
+    text-decoration: none;
+    padding: 5px 8px;
+    color: black;
+    transition: 0.2s;
+    border-radius: 3px;
+    border: none;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bcopy {
+    background-color: #8F754F;
+}
+
+.buttons:hover {
+    cursor: pointer;
+    background-color: #92D5E6;
+}
+
+#streamingList {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 20vh;
+    justify-content: space-evenly;
+}
+
+#streamingList {
+    width: 15em;
+}
+
+@media only screen and (max-width: 711px) {
+    body {
+        font-size: 3vw;
+    }
+    body>div {
+        flex-direction: column;
+        align-items: center;
+        width: 90vw;
+        justify-content: center;
+        text-align: center;
+    }
+    #changeLog {
+        display: none;
+    }
+    #downloadSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 90vw;
+    }
+    .buttonsList {
+        align-self: center;
+    }
+    .buttons {
+        width: 100%;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        height: 20vh;
+        justify-content: space-evenly;
+    }
+}

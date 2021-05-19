@@ -1,28 +1,61 @@
-var DownloadList = new Vue({ 
+var DownloadList = new Vue({
     el: '#downloadList',
     data: {
         Message: 'La machine n\'a pas encore fonctionné...',
-        Link : '',
-        LinkReceived : false,
-        CopyButton : 'Copier le lien'
+        Link: '',
+        LinkReceived: false,
+        CopyButton: 'Copier le lien'
+    }
+});
+
+var StreamingList = new Vue({
+    el: '#streamingList',
+    data: {
+        Message: 'La machine n\'a pas encore fonctionné...',
+        StreamReceived: false,
+        Id: null,
+        QualitysList: [],
+        StreamClear: false,
+        LinkClear: null,
+        VisiblePlayer: false
+    },
+    methods: {
+        getLink: function () {
+            $.getJSON(
+                'https://api.alldebrid.com/v4/link/streaming?agent=LinkOk&apikey=yzDd2zmszOk2lDbxsyeb&id=' + StreamingList.Id + '&stream=' + $("#streamqual").val(),
+                function (data) {
+                    StreamingList.LinkClear = data.data.link
+                    StreamingList.VisiblePlayer = true
+                    StreamingList.StreamReceived = false
+                    StreamingList.Message = 'Pour changer de qualité, le lien doit être re générer.'
+                },
+            )
+        }
     }
 });
 
 $(document).ready(function () {
-    $("#submit").click(function (e) {
+    $("#submitlink").click(function (e) {
         e.preventDefault();
-        var lien = $("#link").val();
+        var lien = $("#linkInput").val();
         if (lien !== "") {
             DownloadList.LinkReceived = false
             DownloadList.CopyButton = 'Copier le lien'
             DownloadList.Message = 'En cours de déchiffrement...'
+            StreamingList.Message = 'En cours de déchiffrement...'
             $.getJSON(
                 'https://api.alldebrid.com/v4/link/unlock?agent=LinkOk&apikey=yzDd2zmszOk2lDbxsyeb&link=' + lien,
                 function (data) {
                     if (data.data !== undefined) {
                         DownloadList.Message = data.data.filename
+                        StreamingList.Message = "Qualité et langue (qual-lang) :"
                         DownloadList.Link = data.data.link
+                        StreamingList.QualitysList = []
+                        StreamingList.QualitysList.push(data.data.streams)
+                        StreamingList.Id = data.data.id
                         DownloadList.LinkReceived = true
+                        StreamingList.StreamReceived = true
+                        StreamingList.VisiblePlayer = false
                     } else {
                         DownloadList.Message = 'Erreur : Lien invalide/hébergeur non supporté'
                     }
@@ -32,6 +65,7 @@ $(document).ready(function () {
             DownloadList.Message = 'Il est ou le lien ?'
         }
     });
+
 });
 
 function copyLink() {
@@ -43,3 +77,5 @@ function copyLink() {
     document.body.removeChild(tempInput);
     DownloadList.CopyButton = 'Lien copié';
 }
+
+$("body").css("flex-wrap", "wrap");
