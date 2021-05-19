@@ -9,8 +9,8 @@
     <link rel="shortcut icon" href="12.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -34,19 +34,23 @@
     </section>
     <section id="streamingList">
         <h2>Streaming :</h2>
-        <div>
+        
+        <div class="form">
             <label for="streamqual"> {{ Message }}</label>
-            <select v-if="StreamReceived" v-for="quality in QualitysList" id="streamqual" name="streamqual">
-                <option v-for="id in quality" :value="id.id">{{ id.id }}</option>
+            <select v-if="StreamReceived" id="streamqual" name="streamqual">
+                <option v-for="quality in QualitysList['0']" :value="quality.id">{{ quality.id }}</option>
             </select>
             <button v-if="StreamReceived" v-on:click="getLink" class="buttons" id="submitstream">➜ 12</button>
         </div>
-        <video v-if="VisiblePlayer" id="my-video" class="video-js" controls preload="auto" data-setup='{"autoplay": true}' autoplay>
+        <video class="video-js" id="videoplayer" v-if="VisiblePlayer" controls autoplay>
             <source :src="LinkClear" type="video/mp4" />
+            <track v-for="sub in SubtitlesList['0']" :src="sub.src" kind="captions" :srclang="sub.name"
+                :label="sub.label">
             <p class="vjs-no-js">
                 JavaScript non détecter : activer le ou changer/mettez à jour votre navigateur.
             </p>
         </video>
+
     </section>
     <section id="changelogSection">
         <h2>Changelog :</h2>
@@ -81,10 +85,15 @@
                     <li>Lost mobile interface</li>
                 </ul>
             </li>
+            <li>v 2.1 :
+                <ul>
+                    <li>Add subtitle</li>
+                </ul>
+            </li>
         </ul>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.11.4/video.js"></script>
     <script src="main.js"></script>
 </body>
 

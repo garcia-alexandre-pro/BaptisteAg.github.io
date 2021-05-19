@@ -12,9 +12,9 @@ var StreamingList = new Vue({
     el: '#streamingList',
     data: {
         Message: 'La machine n\'a pas encore fonctionné...',
-        StreamReceived: false,
         Id: null,
         QualitysList: [],
+        SubtitlesList: [],
         StreamClear: false,
         LinkClear: null,
         VisiblePlayer: false
@@ -27,10 +27,17 @@ var StreamingList = new Vue({
                     StreamingList.LinkClear = data.data.link
                     StreamingList.VisiblePlayer = true
                     StreamingList.StreamReceived = false
+                    DownloadList.LinkReceived = false
                     StreamingList.Message = 'Pour changer de qualité, le lien doit être re générer.'
+                    DownloadList.Message = 'Pour télécharger le ficher, le lien doit être re générer.'
                 },
             )
         }
+    },
+    updated: function () {
+        this.$nextTick(function () {
+            var videoplayer = videojs('videoplayer');
+        })
     }
 });
 
@@ -52,6 +59,7 @@ $(document).ready(function () {
                         DownloadList.Link = data.data.link
                         StreamingList.QualitysList = []
                         StreamingList.QualitysList.push(data.data.streams)
+                        StreamingList.SubtitlesList.push(data.data.subtitles)
                         StreamingList.Id = data.data.id
                         DownloadList.LinkReceived = true
                         StreamingList.StreamReceived = true
@@ -77,5 +85,3 @@ function copyLink() {
     document.body.removeChild(tempInput);
     DownloadList.CopyButton = 'Lien copié';
 }
-
-$("body").css("flex-wrap", "wrap");

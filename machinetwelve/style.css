@@ -8,6 +8,7 @@ html {
 body {
     padding: 2.5vh 2.5vw;
     display: flex;
+    flex-wrap: wrap;
 }
 
 section {
@@ -15,22 +16,21 @@ section {
     margin-bottom: 15px;
 }
 
-video {
-    width: 100% !important;
-    height: unset !important;
+#videoplayer {
+    width: 100%;
 }
 
 #changelogSection ul {
     color: wheat;
 }
 
-#linkSection form, #streamingList div {
+#linkSection form, #streamingList .form{
     display: flex;
     flex-direction: column;
     width: 40%;
 }
 
-#linkSection form>*, #streamingList div>* {
+#linkSection form>*, #streamingList .form>* {
     margin-top: 10px;
 }
 
