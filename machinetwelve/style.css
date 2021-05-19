@@ -24,7 +24,7 @@ section {
     color: wheat;
 }
 
-#linkSection form, #streamingList .form{
+#linkSection form, #streamingList .form {
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -64,7 +64,9 @@ section {
     transition: 0.2s;
     border-radius: 3px;
     border: none;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bcopy {
@@ -76,4 +78,14 @@ section {
     background-color: #92D5E6;
 }
 
-@media only screen and (max-width: 711px) {}
+@media only screen and (max-width: 711px) {
+    section {
+        width: 95vw;
+    }
+    #linkSection form, #streamingList .form {
+        width: 100%;
+    }
+    #downloadList {
+        width: 100%;
+    }
+}
