@@ -57,3 +57,39 @@ body>section {
     height: 20vh;
     justify-content: space-evenly;
 }
+
+@media only screen and (max-width: 711px) {
+    body {
+        font-size: 4vw;
+    }
+    body>div {
+        flex-direction: column;
+        align-items: center;
+        width: 90vw;
+        justify-content: center;
+        text-align: center;
+    }
+    #changeLog {
+        display: none;
+    }
+    #downloadSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 90vw;
+    }
+    .buttonsList {
+        align-self: center;
+    }
+    .buttons {
+        width: 100%;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+        justify-content: space-evenly;
+    }
+}
