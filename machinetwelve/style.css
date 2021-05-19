@@ -12,6 +12,12 @@ body {
 
 section {
     width: 45vw;
+    margin-bottom: 15px;
+}
+
+video {
+    width: 100% !important;
+    height: unset !important;
 }
 
 #changelogSection ul {
@@ -21,7 +27,6 @@ section {
 #linkSection form, #streamingList div {
     display: flex;
     flex-direction: column;
-    height: 60%;
     width: 40%;
 }
 
