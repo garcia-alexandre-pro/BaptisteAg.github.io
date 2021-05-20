@@ -30,6 +30,7 @@ var StreamingList = new Vue({
                     DownloadList.LinkReceived = false
                     StreamingList.Message = 'Pour changer de qualité/changer d\'épisode, la page doit étre rechargé (Réglé dans la prochaine maj).'
                     DownloadList.Message = 'Pour télécharger le ficher, le lien doit être re générer.'
+                    $("#streamingList").css("width", "95vw");
                 },
             )
         }
