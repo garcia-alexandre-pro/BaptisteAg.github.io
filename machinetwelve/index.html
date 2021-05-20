@@ -18,9 +18,10 @@
         <h1>Le pouvoir du PREMIUM</h1>
         <div class="form">
             <label for="linkInput">Lien : </label>
-            <input type="text" id="linkInput" name="linkInput">
-            <button class="buttons" id="submitlink">➜ 12</button>
+            <input type="text" v-model="InputLink" name="linkInput">
+            <button class="buttons" v-on:click="getLink">➜ 12</button>
         </div>
+        <div style="margin-top: 10px;">État : {{ Message }}</div>
     </section>
     <section id="downloadSection">
         <h2>Téléchargement :</h2>
@@ -34,7 +35,7 @@
     </section>
     <section id="streamingList">
         <h2>Streaming :</h2>
-        
+
         <div class="form">
             <label for="streamqual"> {{ Message }} </label>
             <select v-if="StreamQualityReceived" id="streamqual" name="streamqual">

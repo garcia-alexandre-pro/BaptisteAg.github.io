@@ -20,7 +20,7 @@ section {
     width: 100%;
 }
 
-#changelogSection ul {
+#changelogSection ul, #linkSection div:last-child, #streamingList label, #downloadList div:first-child {
     color: wheat;
 }
 
@@ -38,13 +38,8 @@ section {
     width: 40%;
 }
 
-#streamingList label {
-    color: wheat;
-}
-
 #downloadList div:first-child {
     margin-bottom: 10px;
-    color: wheat;
 }
 
 #videoplayerid {
