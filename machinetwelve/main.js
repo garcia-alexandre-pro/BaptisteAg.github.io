@@ -37,7 +37,13 @@ var StreamingList = new Vue({
     updated: function () {
         if (typeof videoplayer === 'undefined') {
             this.$nextTick(function () {
-                var videoplayer = videojs('videoplayerid');
+                var videoplayer = videojs('videoplayerid').ready(function () {
+                    this.hotkeys({
+                        volumeStep: 0.1,
+                        seekStep: 5,
+                        enableModifiersForNumbers: false
+                    });
+                });
             })
         }
     }
