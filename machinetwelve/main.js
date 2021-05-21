@@ -28,7 +28,7 @@ var LinkSection = new Vue({
                                 StreamingList.Id = data.data.id
                                 StreamingList.StreamQualityReceived = true
                                 StreamingList.DownloadLink = LinkSection.InputLink
-                                document.title = 'Untimate 12 - ' + data.data.filename
+                                document.title = 'La12M. - ' + data.data.filename
                             } else {
                                 StreamingList.Message = 'Erreur : Streaming non supporté'
                             }
