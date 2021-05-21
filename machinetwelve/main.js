@@ -7,7 +7,7 @@ var LinkSection = new Vue({
     methods: {
         getLink: function () {
             vm = this
-            if (vm.InputLink !== "") {
+            if (vm.InputLink !== ("" || null)) {
                 DownloadList.LinkReceived = false
                 DownloadList.CopyButton = 'Copier le lien'
                 vm.Message = 'En cours de déchiffrement...'
@@ -28,16 +28,17 @@ var LinkSection = new Vue({
                                 StreamingList.Id = data.data.id
                                 StreamingList.StreamQualityReceived = true
                                 StreamingList.DownloadLink = LinkSection.InputLink
+                                document.title = 'Untimate 12 - ' + data.data.filename
                             } else {
                                 StreamingList.Message = 'Erreur : Streaming non supporté'
                             }
                         } else {
-                            DownloadList.Message = 'Erreur : Lien invalide/hébergeur non supporté'
+                            vm.Message = 'Erreur : Lien invalide/hébergeur non supporté'
                         }
                     },
                 );
             } else {
-                DownloadList.Message = 'Il est ou le lien ?'
+                vm.Message = 'Il est ou le lien ?'
             }
         }
     }
