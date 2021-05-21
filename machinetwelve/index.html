@@ -43,9 +43,8 @@
             </select>
             <button v-if="StreamQualityReceived" v-on:click="getLink" class="buttons" id="submitstream">➜ 12</button>
         </div>
-        <br>
-        <div v-if="StreamQualityReceived">
-            Épisode en cours : {{ FileName }}
+        <div>
+            Épisode en cours : {{ FileName }} | {{ DownloadLink }}
         </div>
         <br><br>
         <video class="video-js" id="videoplayerid" v-if="VisiblePlayer" controls autoplay>

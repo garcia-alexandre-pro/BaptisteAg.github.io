@@ -24,6 +24,10 @@ section {
     width: 100%;
 }
 
+#submitstream {
+    margin-bottom: 10px;
+}
+
 #linkSection .form, #streamingList .form {
     display: flex;
     flex-direction: column;

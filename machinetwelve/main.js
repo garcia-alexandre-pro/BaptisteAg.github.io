@@ -27,6 +27,7 @@ var LinkSection = new Vue({
                                 StreamingList.SubtitlesList.push(data.data.subtitles)
                                 StreamingList.Id = data.data.id
                                 StreamingList.StreamQualityReceived = true
+                                StreamingList.DownloadLink = LinkSection.InputLink
                             } else {
                                 StreamingList.Message = 'Erreur : Streaming non supporté'
                             }
@@ -57,7 +58,8 @@ var StreamingList = new Vue({
         Message: 'La machine n\'a pas encore fonctionné...',
         Id: null,
         LinkClear: null,
-        FileName: null,
+        FileName: '---',
+        DownloadLink: '---',
         QualitysList: [],
         SubtitlesList: [],
         StreamQualityReceived: false,
