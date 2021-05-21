@@ -37,12 +37,17 @@
         <h2>Streaming :</h2>
 
         <div class="form">
-            <label for="streamqual"> {{ Message }} </label>
+            <label for="streamqual">{{ Message }}</label>
             <select v-if="StreamQualityReceived" id="streamqual" name="streamqual">
                 <option v-for="quality in QualitysList['0']" :value="quality.id">{{ quality.id }}</option>
             </select>
             <button v-if="StreamQualityReceived" v-on:click="getLink" class="buttons" id="submitstream">➜ 12</button>
         </div>
+        <br>
+        <div v-if="StreamQualityReceived">
+            Épisode en cours : {{ FileName }}
+        </div>
+        <br><br>
         <video class="video-js" id="videoplayerid" v-if="VisiblePlayer" controls autoplay>
             <source :src="LinkClear" type="video/mp4" />
             <track v-for="sub in SubtitlesList['0']" :src="sub.src" kind="captions" :srclang="sub.name"
@@ -95,7 +100,15 @@
             </li>
             <li>v 2.2 :
                 <ul>
-                    <li>Add Animation / Resize</li>
+                    <li>Add Animation</li>
+                    <li>Add Resize</li>
+                </ul>
+            </li>
+            <li>v 2.3 :
+                <ul>
+                    <li>Improved stability</li>
+                    <li>Fixed streaming window size</li>
+                    <li>Reload page not required</li>
                 </ul>
             </li>
         </ul>

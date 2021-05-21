@@ -2,7 +2,11 @@
 html {
     background-color: #232323;
     font-family: 'Pattaya', sans-serif;
-    color: #BFC20A;
+    color: wheat;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #BFC20A
 }
 
 body {
@@ -18,10 +22,6 @@ section {
 
 #videoplayer {
     width: 100%;
-}
-
-#changelogSection ul, #linkSection div:last-child, #streamingList label, #downloadList div:first-child {
-    color: wheat;
 }
 
 #linkSection .form, #streamingList .form {
@@ -44,6 +44,12 @@ section {
 
 #videoplayerid {
     width: 100%;
+    height: auto;
+    display: table;
+}
+
+#changelogSection ul {
+    margin-bottom: 15px;
 }
 
 .buttonsList {
@@ -75,6 +81,11 @@ section {
 .buttons:hover {
     cursor: pointer;
     background-color: #92D5E6;
+}
+
+.video-js .vjs-tech {
+    position: inherit !important;
+    display: table-row;
 }
 
 @media only screen and (max-width: 711px) {
