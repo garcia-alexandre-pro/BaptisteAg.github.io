@@ -96,6 +96,8 @@ var StreamingList = new Vue({
                     this.hotkeys({
                         volumeStep: 0.1,
                         seekStep: 5,
+                        enableVolumeScroll: false,
+                        enableMute: false,
                         enableModifiersForNumbers: false
                     });
                 });
