@@ -17,7 +17,6 @@ var LinkSection = new Vue({
                         if (data.data !== undefined) {
                             vm.Message = 'OK'
                             DownloadList.Message = data.data.filename
-                            StreamingList.FileName = data.data.filename
                             DownloadList.Link = data.data.link
                             DownloadList.LinkReceived = true
                             if (data.data.streams !== undefined) {
@@ -28,6 +27,7 @@ var LinkSection = new Vue({
                                 StreamingList.Id = data.data.id
                                 StreamingList.StreamQualityReceived = true
                                 StreamingList.DownloadLink = LinkSection.InputLink
+                                StreamingList.FileName = data.data.filename
                                 document.title = 'La12M. - ' + data.data.filename
                             } else {
                                 StreamingList.Message = 'Erreur : Streaming non supporté'
