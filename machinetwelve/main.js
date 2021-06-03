@@ -26,7 +26,6 @@ var LinkSection = new Vue({
                                 StreamingList.SubtitlesList.push(data.data.subtitles)
                                 StreamingList.Id = data.data.id
                                 StreamingList.StreamQualityReceived = true
-                                StreamingList.DownloadLink = LinkSection.InputLink
                                 StreamingList.FileName = data.data.filename
                                 document.title = 'La12M. - ' + data.data.filename
                             } else {
@@ -60,7 +59,6 @@ var StreamingList = new Vue({
         Id: null,
         LinkClear: null,
         FileName: '---',
-        DownloadLink: '---',
         QualitysList: [],
         SubtitlesList: [],
         StreamQualityReceived: false,
