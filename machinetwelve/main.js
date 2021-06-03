@@ -1,13 +1,16 @@
+const urlParams = new URLSearchParams(window.location.search);
+
 var LinkSection = new Vue({
     el: '#linkSection',
     data: {
         Message: 'En attente du lien...',
-        InputLink: null,
+        InputLink: urlParams.get('url'),
     },
     methods: {
         getLink: function () {
             vm = this
             if (vm.InputLink !== ("" || null)) {
+                history.pushState(null, '', '?url=' + vm.InputLink)
                 DownloadList.LinkReceived = false
                 DownloadList.CopyButton = 'Copier le lien'
                 vm.Message = 'En cours de déchiffrement...'
