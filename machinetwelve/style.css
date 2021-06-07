@@ -87,6 +87,10 @@ section {
     background-color: #92D5E6;
 }
 
+.video-js {
+    color: #BFC20A !important;
+}
+
 .video-js .vjs-tech {
     position: inherit !important;
     display: table-row;
@@ -94,6 +98,15 @@ section {
 
 .vjs-menu li {
     color: white;
+}
+
+.vjs-theme-forest {
+    --vjs-theme-forest--primary: #fff !important;
+    --vjs-theme-forest--secondary: #BFC20A !important;
+}
+
+.vjs-progress-control:hover {
+    font-size: 2em !important;
 }
 
 @media only screen and (max-width: 711px) {
