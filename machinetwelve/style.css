@@ -92,6 +92,10 @@ section {
     display: table-row;
 }
 
+.vjs-menu li {
+    color: white;
+}
+
 @media only screen and (max-width: 711px) {
     section {
         width: 95vw;

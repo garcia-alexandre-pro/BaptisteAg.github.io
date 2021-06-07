@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
-    <link href="https://unpkg.com/@videojs/themes@1/dist/fantasy/index.css" rel="stylesheet">
+    <link href="https://unpkg.com/@videojs/themes@1/dist/forest/index.css" rel="stylesheet">
 </head>
 
 <body>
@@ -48,7 +48,7 @@
             Épisode en cours : {{ FileName }}
         </div>
         <br><br>
-        <video class="video-js vjs-theme-fantasy" id="videoplayerid" v-if="VisiblePlayer" controls autoplay>
+        <video class="video-js vjs-theme-forest" id="videoplayerid" v-if="VisiblePlayer" controls autoplay>
             <source :src="LinkClear" type="video/mp4" />
             <track v-for="sub in SubtitlesList['0']" :src="sub.src" kind="captions" :srclang="sub.name"
                 :label="sub.label">
