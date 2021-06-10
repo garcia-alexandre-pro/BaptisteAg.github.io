@@ -26,6 +26,7 @@ var LinkSection = new Vue({
                                 StreamingList.Message = "Qualité et langue (qual-lang) :"
                                 StreamingList.QualitysList = []
                                 StreamingList.QualitysList.push(data.data.streams)
+                                StreamingList.SubtitlesList = []
                                 StreamingList.SubtitlesList.push(data.data.subtitles)
                                 StreamingList.Id = data.data.id
                                 StreamingList.StreamQualityReceived = true
@@ -83,15 +84,12 @@ var StreamingList = new Vue({
                     StreamingList.Message = 'Pour changer de qualité/changer d\'épisode, le lien doit être re générer.'
                     DownloadList.Message = 'Pour télécharger le ficher, le lien doit être re générer.'
                     $("#streamingList").css("width", "95vw")
-                    document.querySelector('#streamingList').scrollIntoView({
-                        behavior: 'smooth'
-                    });
                 },
             )
         }
     },
     watch: {
-        VisiblePlayer: function (val) {
+        VisiblePlayer: function () {
             this.$nextTick(function () {
                 videojs('videoplayerid').ready(function () {
                     this.hotkeys({
@@ -101,6 +99,10 @@ var StreamingList = new Vue({
                         enableMute: false,
                         enableModifiersForNumbers: false
                     });
+                });
+                document.querySelector('#streamingList').scrollIntoView({
+                    block: 'end',
+                    behavior: 'smooth'
                 });
             })
         }
