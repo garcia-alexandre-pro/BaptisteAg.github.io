@@ -10,11 +10,11 @@ window.onload = function () {
     )
 }
 
-if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+// if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     let scriptDesktop = document.createElement("script");
     scriptDesktop.setAttribute("src", "js/desktop.js");
     document.body.appendChild(scriptDesktop);
-}
+// }
 
 var granimInstance = new Granim({
     element: '#canvas-basic',
