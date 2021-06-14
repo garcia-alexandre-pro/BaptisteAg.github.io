@@ -77,7 +77,16 @@ var StreamingList = new Vue({
                         StreamingList.LinkClear = data.data.link
                         StreamingList.VisiblePlayer = true
                     } else {
-                        videojs('videoplayerid').src({ type: "video/mp4", src: data.data.link });
+                        let player = videojs('videoplayerid');
+                        var oldTracks = player.remoteTextTracks();
+                        var i = oldTracks.length;
+                        while (i--) {
+                            player.removeRemoteTextTrack(oldTracks[i]);
+                        }
+                        StreamingList.SubtitlesList[0].forEach(function (track) {
+                            player.addRemoteTextTrack(track);
+                        });
+                        player.src({ type: "video/mp4", src: data.data.link });
                     }
                     StreamingList.StreamQualityReceived = false
                     DownloadList.LinkReceived = false
