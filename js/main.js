@@ -88,3 +88,17 @@ var elmssplide = document.getElementsByClassName('splide');
 for (var i = 0, len = elmssplide.length; i < len; i++) {
     new Splide(elmssplide[i]).mount();
 }
+
+function sendEmail() {
+	Email.send({
+	Host: "smtp.gmail.com",
+	Username : "baptisteageron@gmail.com",
+	Password : "walexs747474",
+	To : 'baptisteageron@gmail.com',
+	From : "baptisteageron@gmail.com",
+	Subject : "yes",
+	Body : "ouiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii",
+	}).then(
+		message => alert("Email envoyé")
+	);
+}

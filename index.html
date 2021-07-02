@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skills.css">
     <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -31,6 +32,7 @@
                 <li><a name="introduction">Introduction</a></li>
                 <li><a name="talents">Talents</a></li>
                 <li><a name="projets">Mes projets</a></li>
+                <li><a name="contact">Me contacter</a></li>
             </ul>
         </nav>
         <img src="./images/logo.svg" alt="Mon logo">
@@ -166,6 +168,24 @@
 
                 </ul>
             </div>
+        </div>
+
+        <div id="formations">
+            <h1 data-aos="fade-up">Mes Formations</h1>
+            <ul>
+                <li>
+                    <h3>Digital Campus Lyon</h3>
+                    Prépa Master | Lyon (69003)
+                </li>
+                <li>
+                    <h3>IUT Annecy</h3>
+                    DUT Informatique | Annecy-le-Vieux (74970)
+                </li>
+                <li>
+                    <h3>Lycée Louis Lachenal</h3>
+                    Bac STI2D Energie et environnement (Mention assez bien) | Pringy (74370)
+                </li>
+            </ul>
         </div>
 
         <div id="projets">
@@ -306,7 +326,25 @@
                         maquette en version mobile (Extrait juste au-dessus).
                     </p>
                 </div>
+            </div>
+            <div id="contact">
+                <h1 data-aos="fade-up">Me contacter</h1>
+                <form data-aos="fade-up" method="post">
+                    <label for="prenom">Prenom :</label>
+                    <input type="text" name="prenom" id="prenom" placeholder="Votre prenom..">
 
+                    <label for="nom">Nom :</label>
+                    <input type="text" name="nom" id="nom" placeholder="Votre nom..">
+
+                    <label for="email">E-mail :</label>
+                    <input type="email" name="email" id="email" placeholder="Votre email..">
+
+                    <label for="subject">Message :</label>
+                    <textarea id="subject" name="subject" placeholder="Écrivez quelque chose.."
+                        style="height:200px"></textarea>
+
+                    <input class="button" type="button" value="Envoyer" onclick="sendEmail()">
+                </form>
             </div>
     </main>
     <footer>
