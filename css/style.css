@@ -452,10 +452,28 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 0;
+    padding: 50px 0 150px 0;
 }
 
+#formations ul {
+    display: flex;
+    justify-content: space-around;
+    width: 70vw;
+    padding-top: 25px;
+}
 
+#formations ul li {
+    flex: 1 1 0px;
+    color: white;
+}
+
+#formations h3 {
+    color: #74FECB;
+}
+
+#formations span {
+    color: white;
+}
 
 #contact {
     display: flex;
@@ -488,6 +506,15 @@ form input[type=button] {
     }
 }
 
+@media only screen and (max-width: 1318px) {
+    #formations ul {
+        flex-direction: column;
+        width: auto;
+    }
+    #formations ul li {
+        padding: 10px 0;
+    }
+}
 @media only screen and (max-width: 700px) {
     body {
         margin: 0;
