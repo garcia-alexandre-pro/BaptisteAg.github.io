@@ -458,7 +458,6 @@ footer p {
 #formations ul {
     display: flex;
     justify-content: space-around;
-    width: 70vw;
     padding-top: 25px;
 }
 
